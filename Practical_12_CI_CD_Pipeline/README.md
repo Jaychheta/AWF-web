@@ -27,3 +27,8 @@ npm run test:fail-demo # failure-demo/broken.test.js -> red on purpose (200 !== 
 - `src/store.js` – in-memory store, so CI needs **no** database service container.
 - `tests/api.test.js` – 7 specs covering health, CRUD, validation (400), content-type (415) and 404.
 - `failure-demo/broken.test.js` – excluded from `npm test` via jest `testMatch`, kept for the deliberate-failure demo.
+
+> **Note:** GitHub only executes workflows located at the *repository root*
+> (`.github/workflows/`). The live pipeline therefore runs from
+> `/.github/workflows/ci.yml`, which is an identical copy of the reference file kept
+> inside this practical folder (`./.github/workflows/ci.yml`).
